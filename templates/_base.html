@@ -8,28 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="http://media.npr.org/favicon.ico" />
-
-    <!-- CHARTBEAT -->
-    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <link rel="shortcut icon" href="http://media.northbynorthwestern.com/media/img/favicon-hi.ico" />
 
     <!-- FONTS -->
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
-    <script>
-        WebFont.load({
-             custom: {
-                 families: [
-                     'Gotham SSm:n4,n7',
-                     'Gotham:n4,n7'
-                 ],
-                 urls: [
-                     'http://s.npr.org/templates/css/fonts/GothamSSm.css',
-                     'http://s.npr.org/templates/css/fonts/Gotham.css'
-                 ]
-             },
-             timeout: 10000
-         });
-    </script>
+    <script type="text/javascript" src="//use.typekit.net/rwj4edd.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <!-- CSS -->
     {{ CSS.push('less/app.less') }}
@@ -42,7 +25,7 @@
 
     {# Twitter #}
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@nprapps">
+    <meta name="twitter:site" content="@nbn_tweets">
     <meta name="twitter:image" content="{{ TWITTER_IMAGE_URL }}" />
 
     {# Facebook #}
@@ -51,8 +34,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="{{ COPY.attribution.subhed_top }}" />
     <meta property="og:image" content="{{ FACEBOOK_IMAGE_URL }}" />
-    <meta property="og:site_name" content="NPR.org" />
-    <meta property="fb:app_id" content="{{ FACEBOOK_APP_ID }}" />
+    <meta property="og:site_name" content="northbynorthwestern.com" />
 
     {# Google News #}
     <meta name="thumbnail" content="{{ GOOGLE_IMAGE_URL }}" />
@@ -65,35 +47,10 @@
     {% block content %}
     {% endblock content %}
 
-    <footer>
-        <div class="primary">
-            <ul>
-                <li><a href="http://www.npr.org" data-action="Click Logo"><img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR Logo"></a></li>
-                <li class="news"><a href="http://www.npr.org/sections/news/">News</a></li>
-                <li class="artslife"><a href="http://www.npr.org/sections/arts/">Arts &amp; Life</a></li>
-                <li class="music"><a href="http://www.npr.org/music/">Music</a></li>
-                <li class="programs"><a href="http://www.npr.org/programs/">Programs</a></li>
-                <li class="listen"><a href="http://www.npr.org/listen/">Listen</a></li>
-                <li class="about"><a href="http://www.npr.org/about/">About</a></li>
-            </ul>
-        </div>
-        <div class="secondary">
-            <p>&copy;2014 NPR</p>
-            <ul>
-                <li id="footerContact"><a href="http://help.npr.org/npr/includes/customer/npr/custforms/contactus.aspx">Contact</a></li>
-                <li><a href="http://www.npr.org/about/termsofuse.html">Terms of Use</a></li>
-                <li><a href="http://www.npr.org/about/privacypolicy.html">Privacy</a></li>
-                <li><a href="http://thin.npr.org/">Text-Only</a></li>
-            </ul>
-        </div>
-    </footer>
-
     {% endblock outer_content %}
 
     {% block extra_foot %}
     {% endblock extra_foot %}
-
-    <script src="js/lib/d3.v3.js"></script>
 
     {{ JS.push('js/lib/jquery.js') }}
     {{ JS.push('js/lib/underscore.js') }}
@@ -176,50 +133,5 @@
         })();
     </script>
 
-    <!-- COMSCORE -->
-    <script type="text/javascript">
-        var _comscore = _comscore || [];
-        _comscore.push({ c1: "2", c2: "17691522" });
-        (function() {
-            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-            el.parentNode.insertBefore(s, el);
-        })();
-    </script>
-
-    <!-- NIELSON -->
-    <script type="text/javascript">
-        (function () {
-            var d = new Image(1, 1);
-            d.onerror = d.onload = function () { d.onerror = d.onload = null; };
-            d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-803244h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
-        })();
-    </script>
-
-    <!-- CHARTBEAT -->
-    <script type="text/javascript">
-        var _sf_async_config={};
-        /** CONFIGURATION START **/
-        _sf_async_config.uid = 18888;
-        _sf_async_config.domain = "npr.org";
-        /** CONFIGURATION END **/
-        (function(){
-            function loadChartbeat() {
-                window._sf_endpt=(new Date()).getTime();
-                var e = document.createElement("script");
-                e.setAttribute("language", "javascript");
-                e.setAttribute("type", "text/javascript");
-                e.setAttribute("src",
-                    (("https:" == document.location.protocol) ?
-                     "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
-                     "http://static.chartbeat.com/") +
-                    "js/chartbeat.js");
-                document.body.appendChild(e);
-            }
-            var oldonload = window.onload;
-            window.onload = (typeof window.onload != "function") ?
-                loadChartbeat : function() { oldonload(); loadChartbeat(); };
-        })();
-    </script>
 </body>
 </html>
