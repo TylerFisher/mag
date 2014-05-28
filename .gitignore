@@ -47,3 +47,5 @@ tumblr-theme.html
 www/test/test.html
 www/assets
 data/gdoc*.csv
+.stories_gzip
+.stories_html

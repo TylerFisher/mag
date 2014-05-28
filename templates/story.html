@@ -1,0 +1,61 @@
+{% extends '_base.html' %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block extra_head_js %}
+{% endblock extra_head_js %}
+
+{% block extra_head %}
+
+{% endblock extra_head %}
+{% block content %}
+<div class="titlecard-wrapper">
+    <div id="top" style="top:0px;position:absolute;" class="waypoint" data-down-waypoint="0,38" data-up-waypoint="0,38"></div>
+    <div id="title-text" class="animated fadeIn">
+        <div class="container">
+            <div class="titlecard-container">
+                <div class="titlecard-content">
+<!--                     <ul class="credit">
+                        <li>
+                            <a href="http://www.npr.org"><img src="assets/img/npr-logo.png" class="npr-logo" alt="NPR" /></a>
+                            <a href="http://www.propublica.org"><img src="assets/img/jpac/logo-propublica.svg" class="propublica-logo" alt="ProPublica" /></a>
+                        </li>
+                        <li>{{ COPY.attribution.byline_top }}</li>
+                    </ul> -->
+                    <h1>Dogs</h1>
+                    <h2>I really like dogs</h2>
+
+                    <div class="begin-bar">
+                        <p><strong>Begin</strong></p>
+                    </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /#title-text -->
+    <div class="titlecard-mask animated fadeOut"></div>
+    <div class="titlecard-first animated"></div>
+    <div class="titlecard"></div>
+
+<!--     <div class="caption-text">
+        <h6>{{ COPY.attribution.titlecard_caption }}</h6>
+    </div> -->
+</div><!-- /titlecard-wrapper -->
+
+
+<section id="content">
+    {% for row in story %}
+
+        {% if row.template == 'chapter' %}
+            {% if row.first_chapter != 'yes' %}
+                </section>
+            {% endif %}
+        {% endif %}
+        {% include "%s.html"|format(row.template) ignore missing %}
+
+    {% endfor %}
+</section>
+<!-- content -->
+{% endblock %}
+{% block extra_foot_js %}
+{% endblock %}
