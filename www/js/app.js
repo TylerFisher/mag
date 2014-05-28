@@ -123,7 +123,7 @@ var on_begin_click = function() {
     }
 
     // Smooth scroll us to the intro.
-    $.smoothScroll({ speed: 800, scrollTarget: '#intro' });
+    $.smoothScroll({ speed: 800, scrollTarget: '#content' });
 
     // Don't do anything else.
     return false;
