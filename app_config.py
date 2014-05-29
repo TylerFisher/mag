@@ -14,11 +14,11 @@ import os
 NAMES
 """
 # Project name used for display
-PROJECT_NAME = 'mag'
+PROJECT_NAME = 'North by Northwestern Spring Magazine'
 
 # Project name to be used in urls
 # Use dashes, not underscores!
-PROJECT_SLUG = 'mag'
+PROJECT_SLUG = 'magazine/spring2014'
 
 # The name of the repository containing the source
 REPOSITORY_NAME = 'mag'

@@ -588,9 +588,9 @@ def deploy(remote='origin'):
     compiled_includes = render()
     render_stories(compiled_includes)
     _gzip('www', '.gzip')
-    # _deploy_to_s3()
+    _deploy_to_s3()
     _gzip('.stories_html', '.stories_gzip')
-    # _deploy_to_s3('.stories_gzip')
+    _deploy_to_s3('.stories_gzip')
 
 """
 Cron jobs
