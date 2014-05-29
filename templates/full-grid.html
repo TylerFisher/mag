@@ -1,10 +1,10 @@
 <div class="full-grid-wrapper">
     <div class="full-grid captioned">
             <div class="enlarge">
-                <img src="{{ row.photo }}" data-src="{{ row.photo }}" alt="{{ row.photo_caption }}" class="img-responsive">
+                <img src="http://apps.northbynorthwestern.com/magazine/spring2014/images/{{ row.photo }}" data-src="http://apps.northbynorthwestern.com/magazine/spring2014/images/{{ row.photo }}" alt="{{ row.photo_caption }}" class="img-responsive">
                 <div class="option"><i class="fa fa-search-plus"></i></div>
             </div><!--/enlarge-->
-            {% if row.photo_caption %}
+            {% if row.photo_caption != 'None' %}
                 <div class="caption-text">
                     <h6>{{ row.photo_caption }}</h6>
                 </div>

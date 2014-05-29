@@ -1,7 +1,7 @@
 <div class="inset-wrapper">
     <div class="inset captioned">
-            <img src="{{ row.photo }}" data-src="{{ row.photo }}" alt="{{ row.photo_caption }}" class="img-responsive">
-            {% if row.photo_caption %}
+            <img src="http://apps.northbynorthwestern.com/magazine/spring2014/images/{{ row.photo }}" data-src="http://apps.northbynorthwestern.com/magazine/spring2014/images/{{ row.photo }}" alt="{{ row.photo_caption }}" class="img-responsive">
+            {% if row.photo_caption != 'None' %}
                 <div class="caption-text">
                     <h6>{{ row.photo_caption }}</h6>
                 </div>

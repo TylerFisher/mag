@@ -70,7 +70,7 @@ a:hover, a:active {
     -ms-animation-fill-mode:both;
     -o-animation-fill-mode:both;
     animation-fill-mode:both;
-    .animation-duration(9s);
+    .animation-duration(4s);
 }
 
 //fadeIn
@@ -229,24 +229,7 @@ a:hover, a:active {
         text-align: center;
 
         &.animated{
-            .animation-duration(5s);
-        }
-
-        .npr-logo {
-            width: 70px;
-            margin: 10px 0;
-            @media @screen-small-above {
-                width: 100px;
-            }
-        }
-
-        .propublica-logo {
-            width: auto;
-            height: 45px;
-            margin: -4px 0 10px 22px;
-            @media @screen-small-above {
-                height: 60px;
-            }
+            .animation-duration(3s);
         }
 
         .titlecard-container {
@@ -280,7 +263,7 @@ a:hover, a:active {
             .text-shadow(0 2px 2px rgba(0,0,0,0.9));
             margin: 5px auto;
             color: #ccc;
-            max-width: 270px;
+            max-width: 400px;
 
             @media @screen-small-above {
                 font-size: 24px;
@@ -292,6 +275,12 @@ a:hover, a:active {
                 display: block;
                 font-style: normal;
             }
+        }
+
+        p.byline {
+            color: #ccc;
+            .text-shadow(0 2px 2px rgba(0,0,0,0.9));
+            font-size: 24px;
         }
 
         .credit {
@@ -334,31 +323,10 @@ a:hover, a:active {
         height: 100%;
         background-color: #000;
         &.animated{
-            .animation-duration(5s);
+            .animation-duration(3s);
         }
         .no-cssanimations & {display: none;}
     }
-
-/*
-    .titlecard-first {
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        .opacity(.2);
-        background-color: #000;
-        background: url('@{img-root}/jpac/bud-family.jpg') no-repeat 0 0;
-        .background-size(cover);
-        .animation-name(titleFade);
-        &.animated{
-            .animation-duration(6s);
-        }
-
-        .ie9 & {display: none;}
-    }
-*/
 
     .titlecard {
         position: absolute;
@@ -374,10 +342,10 @@ a:hover, a:active {
             .opacity(.7);
         }
 
-        .touch & {
-            background: url('http://www.wallsave.com/wallpapers/2048x1536/irish-setter-puppies/354564/irish-setter-puppies-nice-dog-354564.jpg') no-repeat 50% 50%;
-            .background-size(cover);
-        }
+        // .touch & {
+        //     background: url('http://www.wallsave.com/wallpapers/2048x1536/irish-setter-puppies/354564/irish-setter-puppies-nice-dog-354564.jpg') no-repeat 50% 50%;
+        //     .background-size(cover);
+        // }
     }
 
     ul {
@@ -400,7 +368,7 @@ a:hover, a:active {
         p {
             cursor: pointer;
             background-color: #fff;
-            color: #222;
+            color: #3b1d62;
             margin: 0 auto;
             text-align: center;
             text-transform: uppercase;
@@ -414,7 +382,7 @@ a:hover, a:active {
             }
             &:hover {
                 color: #fff;
-                background-color: #111;
+                background-color: #3b1d62;
             }
         }
     }
@@ -595,7 +563,7 @@ a:hover, a:active {
     .full-grid-wrapper {
         .make-row();
 
-        margin: 60px 0 60px 0;
+        margin: 60px 0 30px 0;
 
         .full-grid {
             .make-md-column(12);
@@ -607,7 +575,7 @@ a:hover, a:active {
     .inset-wrapper {
         .make-row();
 
-        margin: 60px 0 60px 0;
+        margin: 60px 0 30px 0;
 
         .inset {
             .make-md-column(8);
@@ -651,6 +619,42 @@ a:hover, a:active {
         }
     }
 
+    // 3x1
+    .thirds-wrapper {
+        .make-row();
+
+        margin: 0;
+        @media @screen-small-above { margin-bottom: 30px; }
+
+        div {
+            margin-bottom: 0;
+
+            &:first-child { margin-bottom: 10px; }
+        }
+
+        @media @screen-medium-above {
+            div:first-child {
+              margin-bottom: 0;
+            }
+            .captioned .caption-text,
+            .metacaption .caption-text {
+                h6 { padding-bottom: 30px; }
+            }
+        }
+        .fluidbox div {margin-bottom: 0;}
+
+        @media @screen-medium-above {
+            .captioned .caption-text,
+            .metacaption .caption-text {
+                h6 { padding-bottom: 0; }
+            }
+        }
+
+        .third {
+            .make-md-column(4);
+        }
+    }
+
     //full bleed images
     .edge-to-edge {
         position: relative;
@@ -673,6 +677,11 @@ a:hover, a:active {
             left: 0;
             padding: 0 10px;
             margin: 0 auto;
+            span.black {
+                color: #000;
+                .text-shadow(1px 1px 1px #eee);
+            }
+
             @media @screen-small-above {
                 width: auto;
                 text-align: left;
@@ -873,7 +882,7 @@ a:hover, a:active {
         }
 
         h3 {
-            font-family: georgia, serif;
+            font-family: 'proxima-nova', Helvetica, Arial, Verdana, sans-serif;
             font-weight: normal;
             text-transform: none;
             color: #555;
@@ -912,6 +921,10 @@ a:hover, a:active {
             }
         }
     }
+    .intro h4 {
+        text-transform: none;
+    }
+
 }// end content
 
 /* lightbox */
@@ -965,6 +978,46 @@ a:hover, a:active {
     &:hover {
         .option {
             .opacity(.7);
+        }
+    }
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid black;
+    background-color: #3b1d62;
+    .nav-items {
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+
+        li {
+            position: relative;
+            height: 100%;
+            display: inline-block;
+
+            img {
+                height: 100%;
+            }
+            &:first-child {
+                padding-right: 10px;
+            }
+
+            a {
+                color: #fff;
+                font-family: 'proxima-nova', 'Helvetica', Arial, Verdana, sans-serif;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
         }
     }
 }

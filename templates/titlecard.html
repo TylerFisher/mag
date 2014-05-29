@@ -1,0 +1,30 @@
+<div class="titlecard-wrapper">
+    <div id="top" style="top:0px;position:absolute;" class="waypoint" data-down-waypoint="0,38" data-up-waypoint="0,38"></div>
+    <div id="title-text" class="animated fadeIn">
+        <div class="container">
+            <div class="titlecard-container">
+                <div class="titlecard-content">
+                    <h1>{{ row.hed }}</h1>
+
+                    <p class="byline">by {{ row.byline_top }}</p>
+
+                    <h2>{{ row.deck }}</h2>
+
+
+                    <div class="begin-bar">
+                        <p><strong>Read</strong></p>
+                    </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /#title-text -->
+    <div class="titlecard-mask animated fadeOut"></div>
+    <div class="titlecard-first animated"></div>
+    <div class="titlecard" style="background: url('http://apps.northbynorthwestern.com/magazine/spring2014/images/{{ row.photo }}') no-repeat 0 0; background-size: cover;"></div>
+<!--
+    <div class="caption-text">
+        <h6>{{ COPY.attribution.photo_credit }}</h6>
+    </div> -->
+</div><!-- /titlecard-wrapper -->
+
+<section id="content">
